@@ -1,14 +1,21 @@
-# Weather-Forecast-
+# Weather-Forecast
 
+# Project Description:
+what is this?
 
+why was it created?
 
+how is it used?
 
-
-
-
-
-
-# MIT License
+# Language Used:
+HTML
+CSS
+JQuery
+JavaScript
+Third-Party APIs
+# Creator:
+This website was created by me
+# MIT License:
 
 Copyright (c) 2022 akaur09
 

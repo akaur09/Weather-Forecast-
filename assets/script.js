@@ -57,7 +57,7 @@ $(".currentForecast").append(
     `<h2 class="atmCity">
         ${data.name} <span class="atmDate">(${
         moment.unix(extenddata?.current?.dt)
-        .format("MM/DD/YYYY")})</span> <img id ="weatherimg" src="${img}"/>
+        .format("M/DD/YYYY")})</span> <img id ="weatherimg" src="${img}"/>
     </h2>`
 );
 
@@ -87,5 +87,39 @@ $(".currentforecast").append(
 
 $(".reportColumn").append(`<div class="fiveday"></div>`);
 $(".fiveday").append(`<h2>Five Day Forecast</h2>`);
-$(".fiveday").append(<div class="cards"></div>);
+$(".fiveday").append(`<div class="cards"></div>`);
 
+extenddata?.daily?.map(day, index);{
+    if(index > 0 && index <6){
+      $(".cards").append(
+          `<div class ="forecast" id="{'part'+ index}">
+                <h3> ${moment.unix(day.dt).format("M/DD/YYYY")} </h3>
+                <div><img id="weatherimg" src="https://openweathermap.org/img/wn/${
+                day.weather[0].icon
+              }.png"/>
+              </div>
+              <p>Temp: ${day.temp.day + " &deg;F"}</p>
+              <p>Humidity: ${day.humidity + "%"}</p>
+            `
+      ); 
+    };
+};
+function uviEvent(uvi){
+    if(uvi < 4) {
+        return "UV index Favorable";
+    } else if (uvi >= 4 && 10){
+        return "UV index Moderate"
+    }else if (uvi >11){
+        return "UV index Extreme"
+    }else{
+        return "UV index Undefined"
+    }
+}
+function history(){
+    var cityHis = JSON.parse(localStorage.getItem("input"));
+    if(!$(".searchHistory")?.length && cityHist?.length) {
+        $(".searchColumn").append(`<div class="searchist"></div>`);
+    }
+
+    $(".searchist")
+}

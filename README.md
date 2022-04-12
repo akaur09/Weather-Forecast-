@@ -1,20 +1,19 @@
 # Weather-Forecast
 
 # Project Description:
-what is this?
+THis webiste was created to forecast the weather of any city the user searches. The websote utilizes third party APIs to fetch information about the city searched and what its' current weather is along with the uv index, humidity adn wind speed. 
 
-why was it created?
-
-how is it used?
-
+Deployed link: https://akaur09.github.io/Weather-Forecast-/
 # Language Used:
 HTML
 CSS
 JQuery
 JavaScript
 Third-Party APIs
+
 # Creator:
 This website was created by me
+
 # MIT License:
 
 Copyright (c) 2022 akaur09

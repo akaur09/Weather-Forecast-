@@ -60,3 +60,32 @@ $(".currentForecast").append(
         .format("MM/DD/YYYY")})</span> <img id ="weatherimg" src="${img}"/>
     </h2>`
 );
+
+$(".currentforecast").append(
+    `<p class= "winds"> Wind Speed 
+    ${
+        extenddata.current.wind_speed +"mph"
+    }</p>`
+);
+
+$(".currentforecast").append(
+    `<p class="temp">
+    ${extenddata.current.temp + "&deg;F"}
+    </p>`
+);
+
+$(".currentforecast").append(
+    `<p class= "humidity">
+    ${extenddata.current.humidity + "%"}
+    </p>`
+);
+
+$(".currentforecast").append(
+    `<p UV index:< span class= "${uviEvent(extenddata.current.uvi)}">
+    ${extenddata.current.uvi}</span>></p>`
+);
+
+$(".reportColumn").append(`<div class="fiveday"></div>`);
+$(".fiveday").append(`<h2>Five Day Forecast</h2>`);
+$(".fiveday").append(<div class="cards"></div>);
+

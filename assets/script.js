@@ -15,3 +15,15 @@
 //     * Uses the OpenWeather API to retrieve weather data. :refer to 06-code-drill 01-api- 03- weather-api
 
 //     * Uses `localStorage` to store persistent data.
+var APIkey= "346fa36c7fb173393b353dd518347322"
+var query= "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid="+ APIkey;
+
+$.ajax({
+    url: query,
+    method: "GET"
+}).then(function(response) {
+
+    console.log(query);
+    console.log(response);
+
+});

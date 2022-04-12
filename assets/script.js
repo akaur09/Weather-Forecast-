@@ -121,5 +121,19 @@ function history(){
         $(".searchColumn").append(`<div class="searchist"></div>`);
     }
 
-    $(".searchist")
+    $(".searchist").html("");
+    for(
+        var counter = 0;
+        counter < cityHis?.length;
+        counter++ 
+    ){
+        var place =cityHis[counter];
+        $(".searchist").append(
+           `<button id="placeBtn${counter}"> ${place}</button>`
+        );
+    }
+    $(".searchist").on("click", `#placeBtn${counter}`, function(){
+        createQuery (place);
+        localStorage.setItem("place", JSON.stringify(place));
+    });
 }

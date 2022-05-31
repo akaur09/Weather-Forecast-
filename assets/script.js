@@ -1,9 +1,9 @@
+// set locations
 var APIkey= "346fa36c7fb173393b353dd518347322"
-var queryone= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid="+ APIkey;
-var querylocation= "https://api.openweathermap.org/data/2.5/onecall?lat=" + data.coord.lat + "&lon=" + data.coord.lon + "&units=imperial&appid="+ APIkey;
-$.ajax({
-    url: queryone,
-    method: "GET"
+var queryone= "https://api.openweathermap.org/data/2.5/onecall?lat=&lon=&units=imperial&appid="+ APIkey;
+var querylocation= "http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid=" + APIkey;
+fetch({
+   
 }).then(function(response) {
 
     console.log("current data ");
@@ -11,9 +11,8 @@ $.ajax({
 
 });
 
-$.ajax({
-    url:querylocation,
-    method: "GET"
+fetch({
+   
 }).then(function(extenddata){
     console.log("location data ");
     console.log(extenddata);

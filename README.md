@@ -12,7 +12,7 @@ JavaScript
 Third-Party APIs
 
 # Creator:
-This website was created by me
+Amnider Kaur (https://github.com/akaur09)
 
 # MIT License:
 
